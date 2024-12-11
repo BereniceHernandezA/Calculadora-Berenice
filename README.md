@@ -1,19 +1,26 @@
 # Calculadora Remota con XML-RPC
 
-Es una calcula remota que usa el protocolo de XML-RPC esta echa en python. Esta calculadora nos permite ralizar operaciones aritmeticas basicas de forma remota.
+Esta aplicación es una calculadora remota implementada en Python que utiliza el protocolo XML-RPC para realizar operaciones aritméticas básicas de forma remota.
 
+## Características
 
-## Caractereisticas
-- Servidor: Este procesa las operaciones que el cliente solicita.
-- Cliente: Envia las solicitude al servidor de lo que necesita hacer y recibe la 
-   respuesta.
+- **Servidor**: Procesa las operaciones solicitadas por el cliente.
+- **Cliente**: Envía las solicitudes al servidor para realizar las operaciones y recibe las respuestas.
 
-Las operaciones que realiza son:
-* Suma
-* Resta
-* Multiplicacion 
-* Divicion
+### Operaciones disponibles:
 
-## USO
-Para ejecutar la Calculadora primero debemos de ejecutar el Server y despues el cliete.
-Cuando tengamos el menu de opciones que nos depslega podremos ingresar el numero de operacion que queremos realizar y despues agregar los numero para la operacion.
+- Suma
+- Resta
+- Multiplicación
+- División
+
+## Uso
+
+Para utilizar la calculadora remota, siga estos pasos:
+
+1. Ejecute primero el servidor.
+2. Posteriormente, inicie el cliente.
+3. Una vez que se despliegue el menú de opciones en el cliente, seleccione el número correspondiente a la operación que desea realizar.
+4. Ingrese los números requeridos para completar la operación.
+
+El servidor procesará la solicitud y devolverá el resultado al cliente.
