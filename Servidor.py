@@ -1,29 +1,20 @@
 from xmlrpc.server import SimpleXMLRPCServer
 
-# Funciones 
-def sumar(a, b):
-    return a + b
+# Diccionario de funciones para registrar
+funciones = {
+    "sumar": lambda a, b: a + b,
+    "restar": lambda a, b: a - b,
+    "multiplicar": lambda a, b: a * b,
+    "dividir": lambda a, b: "Error: División por cero" if b == 0 else a / b
+}
 
-def restar(a, b):
-    return a - b
-
-def multiplicar(a, b):
-    return a * b
-
-def dividir(a, b):
-    if b == 0:
-        return "Error: División por cero"
-    return a / b
-
-
+# Configurar el servidor
 server = SimpleXMLRPCServer(("localhost", 9000))
 print("Servidor de calculadora XML-RPC en ejecución...")
 
 # Registrar las funciones
-server.register_function(sumar, "sumar")
-server.register_function(restar, "restar")
-server.register_function(multiplicar, "multiplicar")
-server.register_function(dividir, "dividir")
+for nombre, funcion in funciones.items():
+    server.register_function(funcion, nombre)
 
-# Ejecucion del Servidor
+# Ejecución del servidor
 server.serve_forever()
